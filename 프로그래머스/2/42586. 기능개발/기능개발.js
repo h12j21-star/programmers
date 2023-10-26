@@ -8,7 +8,7 @@ function solution(progresses, speeds) {
     })
      let max = obj[0];
     for(let [key,value] of Object.entries(obj)){
-        if(max===value){
+        if(max>=value){
              count++;
         }
         else if(max<value){
@@ -16,8 +16,6 @@ function solution(progresses, speeds) {
             answer.push(count)
             count=1;
             
-        }else if(max>value){
-            count++;
         }
         
     }
